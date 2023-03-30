@@ -1,3 +1,3 @@
 # Stack
 
-My template Stack Implementation.
+My template Stack -using dynamic array- Implementation.
