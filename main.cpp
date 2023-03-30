@@ -109,6 +109,10 @@ public:
             exit(0);
         }
     }
+    ~Stack()
+    {
+        delete[] container;
+    }
 };
 
 int main()
@@ -117,8 +121,10 @@ int main()
     intStack.push(100);
     intStack.push(1);
     intStack.push(2);
+    cout << intStack.Top();
+
     intStack.clear();
 
-
+cout << intStack.Top();
     return 0;
 }
