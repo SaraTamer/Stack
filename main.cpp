@@ -40,6 +40,7 @@ public:
     {
         container = new T[capacity];
     }
+    ll size(){return (top+1);}
     bool isFull()
     {
         return (top >= capacity - 1);
@@ -109,6 +110,14 @@ public:
             exit(0);
         }
     }
+    void print()
+    {
+        for(ll i = top ; i >= 0 ; i--)
+        {
+            cout << container[i] << ' ';
+        }
+        cout << '\n';
+    }
     ~Stack()
     {
         delete[] container;
@@ -122,9 +131,10 @@ int main()
     intStack.push(1);
     intStack.push(2);
     cout << intStack.Top();
-
+    intStack.print();
     intStack.clear();
+    cout << intStack.size();
 
-cout << intStack.Top();
+    cout << intStack.pop();
     return 0;
 }
